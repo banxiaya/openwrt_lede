@@ -26,6 +26,9 @@ wget -O ./package/base-files/files/etc/banner https://raw.githubusercontent.com/
 # 替换内核
 sed -i 's/PATCHVER:=5.15/PATCHVER:=5.4/g' ./target/linux/x86/Makefile
 
+#替换哈希值
+sed -i 's/02b79d5e2b07b5e64cd28f1fe84395ee11eef95fc49fd923a9ab93022b148be6/skip/g' feeds/packages/utils/containerd/Makefile
+
 # 内核替换成 kernel 5.4.183
 
 #sed -i 's/LINUX_KERNEL_HASH-5.4.175 = ac901bdffb1488d6c730ca7ab42322163dd331b240e2f06ad83d199e251a4840/LINUX_KERNEL_HASH-5.4.183 = 2d4b0b77644835410b2a5f599b2893fe199d5542615684207f579753020cc99c/g' ./include/kernel-5.4
