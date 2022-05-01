@@ -41,6 +41,9 @@ echo "exit 0" >> package/lean/default-settings/files/zzz-default-settings
 #替换coremark ./lede/feeds/packages/utils/coremark/coremark.sh
 wget -O ./feeds/packages/utils/coremark/coremark.sh https://raw.githubusercontent.com/banxiaya/openwrt_X86/main/diy/x86_lede/coremark.sh
 
+#替换哈希值
+sed -i 's/02b79d5e2b07b5e64cd28f1fe84395ee11eef95fc49fd923a9ab93022b148be6/skip/g' feeds/packages/utils/containerd/Makefile
+
 ##更改插件位置
 
 #ZeroTier
